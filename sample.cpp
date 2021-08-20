@@ -30,7 +30,7 @@ int main() {
 
     TWHDWallet* walletImp = nullptr;
     TWHDWallet* walletNew = TWHDWalletCreate(128, TWStringCreateWithUTF8Bytes(""));
-    auto secretMnemonic =TWStringUTF8Bytes(TWHDWalletMnemonic(walletNew))
+    auto secretMnemonic = TWStringUTF8Bytes(TWHDWalletMnemonic(walletNew));
     {
         // Create a new multi-coin HD wallet, with new recovery phrase (mnemonic)
         cout << "Creating a new HD wallet ... ";
@@ -44,7 +44,7 @@ int main() {
         // Alternative: Import wallet with existing recovery phrase (mnemonic)
         cout << "Importing an HD wallet from earlier ... ";
         
-        walletImp = TWHDWalletCreateWithMnemonic(secretMnemonic, TWStringCreateWithUTF8Bytes(""));
+        walletImp = TWHDWalletCreateWithMnemonic(secretMnemonic, TWStringCreateWithUTF8Bytes(" "));
         TWStringDelete(secretMnemonic);
         cout << "done." << endl;
         cout << "Secret mnemonic for imported wallet: '";
