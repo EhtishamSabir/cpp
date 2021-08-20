@@ -28,7 +28,7 @@ int main() {
         cout << endl;
     }
 
-    TWHDWallet* walletImp = nullptr;
+//    TWHDWallet* walletImp = nullptr;
     {
         // Create a new multi-coin HD wallet, with new recovery phrase (mnemonic)
         cout << "Creating a new HD wallet ... ";
